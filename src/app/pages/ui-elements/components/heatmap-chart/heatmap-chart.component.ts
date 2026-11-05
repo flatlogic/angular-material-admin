@@ -30,6 +30,7 @@ type ChartOptions = {
 };
 
 @Component({
+  standalone: false,
   selector: 'app-heatmap-chart',
   templateUrl: './heatmap-chart.component.html',
   styleUrls: ['./heatmap-chart.component.scss']

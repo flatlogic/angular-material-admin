@@ -1,3 +1,5 @@
+import ApexCharts from 'apexcharts';
+import type { ApexGrid, ApexLegend, ApexStroke } from 'apexcharts';
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import {
   ApexAxisChartSeries,
@@ -37,6 +39,7 @@ enum matSelectedFields {
 }
 
 @Component({
+  standalone: false,
   selector: 'app-daily-line-chart',
   templateUrl: './daily-line-chart.component.html',
   styleUrls: ['./daily-line-chart.component.scss']

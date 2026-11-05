@@ -7,6 +7,7 @@ enum matSelectedFields {
 }
 
 @Component({
+  standalone: false,
   selector: 'app-date-menu',
   templateUrl: './date-menu.component.html',
   styleUrls: ['./date-menu.component.scss']

@@ -38,14 +38,14 @@ $ git clone -o angular-material-admin -b master --single-branch \
 $ cd MyApp
 ```
 
-#### 2. Run `yarn install`
+#### 2. Run `npm ci`
 
 This will install both run-time project dependencies and developer tools listed
 in [package.json](../package.json) file.
 
-#### 3. Run `yarn start`
+#### 3. Run `npm start`
 
-This command will build the app from the source files. Then open `localhost:4200` in your browser.
+This command will build the app from the source files. Then open `localhost:4200/angular-material-admin/` in your browser.
 
 Now you can open your web app in a browser, on mobile devices and start
 hacking. The page must be served from a web server, e.g. apache, nginx, WebStorm built-in web server, etc., otherwise some features may not work properly.
@@ -76,3 +76,24 @@ Looking for premium themes and templates? Check out our other templates at [flat
 ## License
 The source code for the template is licensed under the MIT license, which you can find in
 the LICENSE.txt file.
+
+
+## Dependency maintenance (2026-11-05)
+
+Use Node 22.12+ and the committed npm lock (`npm ci`, without peer bypasses). Angular 21 LTS, Material/CDK 21 and the current application builder replace the unsupported Angular 11/Webpack toolchain. Existing NgModules, routes, demo login, palettes, data and SCSS remain. Material's M2 theme and MDC selectors retain the original visual design. Bootstrap occurs once; CLI HMR replaces the obsolete manual Webpack hook.
+
+```
+npm ci
+npm audit
+npm run lint
+npm run build
+npm test
+PLAYWRIGHT_DEV=1 npm test
+PLAYWRIGHT_DOCS=1 npm test
+```
+
+The full dependency audit includes development tools. Scoped glob/minimatch updates keep the CLI and TypeScript lint APIs; tests exercise glob traversal, ignore-walk, Stylus imports and critical-CSS generation, and a dry-run CLI component generation verifies schematics without modifying the app. Lint retains six existing unused-argument warnings.
+
+Chrome regressions cover demo login/logout, real Apex/ECharts output, chart period selection, employee filtering/selection, charts/icons/typography routes, notifications and the mobile drawer/viewport. The map uses the official Angular component and Google loader 2.0.2 with its existing key, center, zoom and draggable marker. Maps typings 3.64.0 retain the heatmap declarations used by Angular 21. Live Google provider access is outside the local regression.
+
+`npm run build` writes `dist/`. Refresh the generated `docs/` files from that verified output; the docs regression serves the actual saved files under `/angular-material-admin/`. No deployment is performed. Sass deprecation, browser-support and bundle-size warnings remain visible. Angular's supported versions are documented at https://angular.dev/reference/versions and its builder migration at https://angular.dev/tools/cli/build-system-migration.

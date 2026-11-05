@@ -6,6 +6,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { Employee } from '../../models/employee';
 
 @Component({
+  standalone: false,
   selector: 'app-employee-table',
   templateUrl: './employee-table.component.html',
   styleUrls: ['./employee-table.component.scss']
@@ -35,9 +36,11 @@ export class EmployeeTableComponent implements OnInit {
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
   public masterToggle(): void {
-    this.isAllSelected() ?
-      this.selection.clear() :
+    if (this.isAllSelected()) {
+      this.selection.clear();
+    } else {
       this.dataSource.data.forEach(row => this.selection.select(row));
+    }
   }
 
   /** The label for the checkbox on the passed row */

@@ -7,6 +7,7 @@ import { AuthService, EmailService } from '../../../../pages/auth/services';
 import { routes } from '../../../../consts';
 
 @Component({
+  standalone: false,
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']

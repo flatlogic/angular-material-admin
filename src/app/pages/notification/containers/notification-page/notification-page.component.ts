@@ -15,6 +15,7 @@ enum ToastPositionTypes {
 }
 
 @Component({
+  standalone: false,
   selector: 'app-notification-page',
   templateUrl: './notification-page.component.html',
   styleUrls: ['./notification-page.component.scss']

@@ -6,7 +6,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import {
   DashedLineChartComponent,
@@ -23,7 +23,6 @@ import { UiElementsRoutingModule } from './ui-elements-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { ChartsService } from './services';
 import { DashboardModule } from '../dashboard/dashboard.module';
-import { googleMapKey } from './consts';
 
 @NgModule({
   declarations: [
@@ -43,10 +42,7 @@ import { googleMapKey } from './consts';
     MatTabsModule,
     MatIconModule,
     NgApexchartsModule,
-    AgmCoreModule,
-    AgmCoreModule.forRoot({
-      apiKey: googleMapKey
-    }),
+    GoogleMapsModule,
     MatToolbarModule,
     SharedModule,
     DashboardModule,

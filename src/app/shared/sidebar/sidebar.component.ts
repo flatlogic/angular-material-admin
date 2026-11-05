@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { routes } from '../../consts/routes';
 
 @Component({
+  standalone: false,
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']

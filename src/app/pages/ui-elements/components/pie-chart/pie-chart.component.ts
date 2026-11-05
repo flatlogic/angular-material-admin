@@ -30,6 +30,7 @@ type ChartOptions = {
 };
 
 @Component({
+  standalone: false,
   selector: 'app-pie-chart',
   templateUrl: './pie-chart.component.html',
   styleUrls: ['./pie-chart.component.scss']

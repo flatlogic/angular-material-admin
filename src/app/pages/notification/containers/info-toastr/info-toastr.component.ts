@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Toast, ToastPackage, ToastrService } from 'ngx-toastr';
+import { Toast } from 'ngx-toastr';
 
 @Component({
+  standalone: false,
   selector: 'app-info-toastr',
   templateUrl: './info-toastr.component.html',
   styleUrls: ['./info-toastr.component.scss'],
@@ -24,10 +25,4 @@ import { Toast, ToastPackage, ToastrService } from 'ngx-toastr';
   preserveWhitespaces: false
 })
 export class InfoToastrComponent extends Toast {
-  constructor(
-    protected toastrService: ToastrService,
-    public toastPackage: ToastPackage,
-  ) {
-    super(toastrService, toastPackage);
-  }
 }

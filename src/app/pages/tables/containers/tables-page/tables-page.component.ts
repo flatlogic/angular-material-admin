@@ -5,6 +5,7 @@ import { TablesService } from '../../services';
 import { Customer, Employee } from '../../models';
 
 @Component({
+  standalone: false,
   selector: 'app-tables-page',
   templateUrl: './tables-page.component.html',
   styleUrls: ['./tables-page.component.scss']

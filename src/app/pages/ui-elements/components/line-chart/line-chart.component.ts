@@ -35,6 +35,7 @@ export type ChartOptions = {
 };
 
 @Component({
+  standalone: false,
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.scss']
