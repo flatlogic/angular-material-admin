@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Customer } from '../../models';
 
 @Component({
+  standalone: false,
   selector: 'app-material-table',
   templateUrl: './material-table.component.html',
   styleUrls: ['./material-table.component.scss']

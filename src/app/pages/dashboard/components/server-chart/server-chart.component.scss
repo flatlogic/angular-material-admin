@@ -47,3 +47,10 @@
 
 
 
+
+.server-chart__content-item apx-chart {
+  display: block;
+  width: 60%;
+  min-width: 0;
+  flex-shrink: 0;
+}

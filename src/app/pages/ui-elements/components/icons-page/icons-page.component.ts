@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-icons-page',
   templateUrl: './icons-page.component.html',
   styleUrls: ['./icons-page.component.scss']

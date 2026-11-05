@@ -1,5 +1,5 @@
 <app-layout>
-  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" class="agm-map">
-    <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true"></agm-marker>
-  </agm-map>
+  <google-map *ngIf="mapsReady | async" [center]="{lat: lat, lng: lng}" [zoom]="zoom" height="100%" width="100%" class="google-map">
+    <map-marker [position]="{lat: lat, lng: lng}" [options]="{draggable: true}"></map-marker>
+  </google-map>
 </app-layout>

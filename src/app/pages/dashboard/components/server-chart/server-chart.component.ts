@@ -1,3 +1,4 @@
+import type { ApexFill } from 'apexcharts';
 import { Component, Input, OnInit } from '@angular/core';
 import {
   ApexAxisChartSeries,
@@ -31,6 +32,7 @@ type ChartOptions = {
 };
 
 @Component({
+  standalone: false,
   selector: 'app-server-chart',
   templateUrl: './server-chart.component.html',
   styleUrls: ['./server-chart.component.scss']

@@ -30,6 +30,7 @@ type ChartOptions = {
 };
 
 @Component({
+  standalone: false,
   selector: 'app-dashed-line-chart',
   templateUrl: './dashed-line-chart.component.html',
   styleUrls: ['./dashed-line-chart.component.scss']

@@ -10,6 +10,7 @@
 }
 
 .chart {
+  min-width: 0;
   width: 100%;
 
   @media (max-width: $normal) {

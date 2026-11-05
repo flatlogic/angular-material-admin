@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
+  standalone: false,
   selector: 'app-sign-form',
   templateUrl: './sign-form.component.html',
   styleUrls: ['./sign-form.component.scss']

@@ -13,6 +13,7 @@ import {
 } from '../../models';
 
 @Component({
+  standalone: false,
   selector: 'app-dashboard-page',
   templateUrl: './dashboard-page.component.html',
   styleUrls: ['./dashboard-page.component.scss']

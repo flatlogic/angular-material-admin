@@ -10,6 +10,7 @@ import {
 } from '../../models';
 
 @Component({
+  standalone: false,
   selector: 'app-charts-page',
   templateUrl: './charts-page.component.html',
   styleUrls: ['./charts-page.component.scss']

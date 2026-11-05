@@ -1,3 +1,4 @@
+import type { ApexAxisChartSeries, ApexChart, ApexDataLabels, ApexFill, ApexGrid, ApexLegend, ApexPlotOptions, ApexStroke, ApexTooltip, ApexXAxis, ApexYAxis } from 'apexcharts';
 import { Component, Input, OnInit } from '@angular/core';
 
 import { ProjectStatData, ProjectTimeData } from '../../models';
@@ -24,6 +25,7 @@ enum ProjectsType {
 }
 
 @Component({
+  standalone: false,
   selector: 'app-project-stat-chart',
   templateUrl: './project-stat-chart.component.html',
   styleUrls: ['./project-stat-chart.component.scss']

@@ -4,6 +4,7 @@ import { VisitsChartData } from '../../models';
 import { colors } from '../../../../consts';
 
 @Component({
+  standalone: false,
   selector: 'app-visits-chart',
   templateUrl: './visits-chart.component.html',
   styleUrls: ['./visits-chart.component.scss']
